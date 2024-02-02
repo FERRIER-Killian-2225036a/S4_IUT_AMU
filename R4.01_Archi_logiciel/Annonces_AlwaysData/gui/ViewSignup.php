@@ -24,7 +24,7 @@ class ViewSignup extends View
                 <input type="text" name="login" id="login" placeholder="identifiant" maxlength="12" required />
                 <br />
                 <label for="password"> Votre mot de passe </label> :
-                <input type="password" name="password" id="password" maxlength="12" required />
+                <input type="password" name="password" id="password" maxlength="20" required />
                 
                 <br />
                 <input type="submit" value="Envoyer">
