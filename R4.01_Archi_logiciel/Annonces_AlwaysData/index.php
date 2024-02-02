@@ -20,7 +20,6 @@ use service\AnnoncesChecking;
 $data = null;
 try {
     // construction du modèle
-    $data = new DataAccess( new PDO(') );
 
 } catch (PDOException $e) {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
@@ -73,7 +72,6 @@ elseif ( '/annonces/index.php/signup' == $uri ){
     // si post on traite la requete
     if (isset($_POST['login'], $_POST['password'], $_POST['prenom'], $_POST['nom'])){
         $controller->signUp($data, $_POST['login'], $_POST['password'], $_POST['prenom'], $_POST['nom']);
-        echo 'OUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII';
     }
     else {
         $layout = new Layout("gui/layout.html" );

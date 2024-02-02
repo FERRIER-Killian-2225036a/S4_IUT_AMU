@@ -80,6 +80,7 @@ class DataAccess implements DataAccessInterface
 
     //TODO : Après vérification, ajout des données dans la bd
     public function addUser($login, $password, $prenom, $nom, $dateCreation) {
+
         $query = 'INSERT INTO Users (login, password, prenom, nom, dateCreation) VALUES (?, ?, ?, ?, ?)';
         $statement = $this->dataAccess->prepare($query);
         $success = $statement->execute([$login, $password, $prenom, $nom, $dateCreation]);

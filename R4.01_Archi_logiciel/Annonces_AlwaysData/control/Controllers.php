@@ -20,22 +20,22 @@ class Controllers
 
     public function signUp($data, $login, $password, $prenom, $nom)
     {
+
         // Ajoute la date de création de l'utilisateur (par exemple, la date actuelle)
         $dateCreation = date("Y-m-d H:i:s");
 
 
         //TODO: vérif du bon format des données
-        // Appelle la fonction addUser du modèle pour ajouter l'utilisateur
-        $user = $data->addUser($login, $password, $prenom, $nom, $dateCreation);
 
-        // Vérifie si l'ajout de l'utilisateur a réussi
-        if ($user !== null) {
-            // Redirige l'utilisateur vers une page de confirmation ou une autre page appropriée
+        // Appelle la fonction addUser du modèle pour ajouter l'utilisateur
+        if ($data->getUser($login, $password) == null){
+            $user = $data->addUser($login, $password, $prenom, $nom, $dateCreation);
             header("Location: /annonces/index.php");
             exit();
         } else {
-            // Affiche un message d'erreur ou gère l'erreur d'ajout de l'utilisateur
-            echo "Erreur lors de l'inscription.";
+            header( "refresh:5;url=/annonces/index.php" );
+            echo "L'utilisateur existe déjà (redirection automatique dans 5 sec.)";
+            exit;
         }
 
     }
