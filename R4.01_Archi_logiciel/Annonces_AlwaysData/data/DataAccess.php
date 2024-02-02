@@ -77,5 +77,24 @@ class DataAccess implements DataAccessInterface
 
         return $user;
     }
+
+    //TODO : Après vérification, ajout des données dans la bd
+    public function addUser($login, $password, $prenom, $nom, $dateCreation) {
+        $query = 'INSERT INTO Users (login, password, prenom, nom, dateCreation) VALUES (?, ?, ?, ?, ?)';
+        $statement = $this->dataAccess->prepare($query);
+        $success = $statement->execute([$login, $password, $prenom, $nom, $dateCreation]);
+
+        // Vérifie si l'ajout a été réussi
+        if ($success) {
+            // Crée un nouvel objet User avec les données ajoutées
+            $user = new User($login, $password);
+        } else {
+            $user = null;
+        }
+
+        $statement->closeCursor();
+
+        return $user;
+    }
 }
 

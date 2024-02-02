@@ -11,7 +11,7 @@ class AnnoncesChecking
 
     public function authentificate($login, $password, $data)
     {
-        return ( $data->getUser($login, $password) != null );
+        return ($data->getUser($login, $password) != null);
     }
 
     public function getAllAnnonces($data)

@@ -10,8 +10,9 @@ include_once 'gui/Layout.php';
 include_once 'gui/ViewLogin.php';
 include_once 'gui/ViewAnnonces.php';
 include_once 'gui/ViewPost.php';
+include_once 'gui/ViewSignup.php';
 
-use gui\{Layout,ViewAnnonces,ViewLogin,ViewPost};
+use gui\{Layout,ViewAnnonces,ViewLogin,ViewPost, ViewSignup};
 use control\{Controllers, Presenter};
 use data\DataAccess;
 use service\AnnoncesChecking;
@@ -19,7 +20,7 @@ use service\AnnoncesChecking;
 $data = null;
 try {
     // construction du modèle
-    $data = new DataAccess( new PDO('mysql:host=;dbname=', '', '') );
+    $data = new DataAccess( new PDO(') );
 
 } catch (PDOException $e) {
     print "Erreur de connexion !: " . $e->getMessage() . "<br/>";
@@ -67,6 +68,19 @@ elseif ( '/annonces/index.php/post' == $uri
     $vuePost= new ViewPost( $layout, $presenter );
 
     $vuePost->display();
+}
+elseif ( '/annonces/index.php/signup' == $uri ){
+    // si post on traite la requete
+    if (isset($_POST['login'], $_POST['password'], $_POST['prenom'], $_POST['nom'])){
+        $controller->signUp($data, $_POST['login'], $_POST['password'], $_POST['prenom'], $_POST['nom']);
+        echo 'OUIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII';
+    }
+    else {
+        $layout = new Layout("gui/layout.html" );
+        $vueSignup = new ViewSignup( $layout );
+
+        $vueSignup->display();
+    }
 }
 else {
     header('Status: 404 Not Found');
