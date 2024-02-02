@@ -1,9 +1,11 @@
 <?php
 namespace control;
 use data\DataAccess;
+use service\StrengthChecking;
 
 include_once 'service/AnnoncesChecking.php';
 include_once 'data/DataAccess.php';
+include_once 'service/StrengthChecking.php';
 class Controllers
 {
     public function annoncesAction($login, $password, $data, $annoncesCheck)
@@ -28,25 +30,15 @@ class Controllers
         //TODO: vérif du bon format des données
 
         // Appelle la fonction addUser du modèle pour ajouter l'utilisateur
-        if ($data->getUser($login, $password) == null){
+        if ($data->getUser($login, $password) == null && (new StrengthChecking())->passwordStrengthChecking($password)){
             $user = $data->addUser($login, $password, $prenom, $nom, $dateCreation);
             header("Location: /annonces/index.php");
             exit();
         } else {
             header( "refresh:5;url=/annonces/index.php" );
-            echo "L'utilisateur existe déjà (redirection automatique dans 5 sec.)";
+            echo "L'utilisateur existe déjà ou le mot de passe n'est pas assez fort (redirection automatique dans 5 sec.)";
             exit;
         }
 
     }
 }
-
-
-/*
-    protected $data = null;
-
-    public function __construct($data)
-    {
-        $this->data = $data;
-    }
- */
