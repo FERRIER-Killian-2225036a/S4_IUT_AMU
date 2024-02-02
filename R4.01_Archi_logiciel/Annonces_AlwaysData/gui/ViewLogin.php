@@ -17,7 +17,9 @@ class ViewLogin extends View
                 <br />
                 <label for="password"> Votre mot de passe </label> :
                 <input type="password" name="password" id="password" maxlength="12" required />
-        
+                <br />
+                <a href="/annonces/index.php/signup">Créer un compte</a>
+                <br />
                 <input type="submit" value="Envoyer">
             </form>';
     }
