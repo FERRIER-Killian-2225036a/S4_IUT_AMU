@@ -11,8 +11,9 @@ include_once 'gui/ViewLogin.php';
 include_once 'gui/ViewAnnonces.php';
 include_once 'gui/ViewPost.php';
 include_once 'gui/ViewSignup.php';
+include_once 'gui/ViewAddPost.php';
 
-use gui\{Layout,ViewAnnonces,ViewLogin,ViewPost, ViewSignup};
+use gui\{Layout,ViewAnnonces,ViewLogin,ViewPost, ViewSignup, ViewAddPost};
 use control\{Controllers, Presenter};
 use data\DataAccess;
 use service\AnnoncesChecking;
@@ -78,6 +79,18 @@ elseif ( '/annonces/index.php/signup' == $uri ){
         $vueSignup = new ViewSignup( $layout );
 
         $vueSignup->display();
+    }
+}
+elseif ( '/annonces/index.php/addPost' == $uri ){
+    // si post on traite la requete
+    if (isset($_POST['title'], $_POST['body'])){
+        $controller->addPost($data, $_POST['title'], $_POST['body']);
+    }
+    else {
+        $layout = new Layout("gui/layout.html" );
+        $vueAddPost = new ViewAddPost( $layout );
+
+        $vueAddPost->display();
     }
 }
 else {

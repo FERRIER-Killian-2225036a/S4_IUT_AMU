@@ -63,6 +63,28 @@ class DataAccess implements DataAccessInterface
         return $post;
     }
 
+    public function addPost($title, $body, $dateCreation)
+    {
+        $query = 'INSERT INTO Post (title, body, date) VALUES (?, ?, ?)';
+        $statement = $this->dataAccess->prepare($query);
+        $success = $statement->execute([$title, $body, $dateCreation]);
+
+        // Vérifie si l'ajout a été réussi
+        if ($success) {
+            // Récupère l'ID généré automatiquement pour le nouveau post
+            $postId = $this->dataAccess->lastInsertId();
+
+            // Crée un nouvel objet Post avec les données ajoutées et l'ID généré
+            $post = new Post($postId, $title, $body, $dateCreation);
+        } else {
+            $post = null;
+        }
+
+        $statement->closeCursor();
+
+        return $post;
+    }
+
     public function getUser($login, $password)
     {
         $user = null;

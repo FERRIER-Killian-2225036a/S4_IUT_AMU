@@ -11,5 +11,7 @@ class ViewPost extends View
         $this->title= 'Exemple Annonces Basic PHP: Post';
 
         $this->content = $presenter->getCurrentPostHTML();
+
+        echo '<a href="javascript:history.back()">Retour</a>';
     }
 }

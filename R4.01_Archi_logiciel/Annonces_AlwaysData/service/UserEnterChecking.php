@@ -1,6 +1,6 @@
 <?php
 namespace service;
-class StrengthChecking {
+class UserEnterChecking {
     public function passwordStrengthChecking($password): bool
     {
         // Vérifie la longueur du mot de passe
@@ -16,4 +16,5 @@ class StrengthChecking {
         // Le mot de passe ne respecte pas les critères
         return false;
     }
+
 }

@@ -14,10 +14,11 @@ class Presenter
         $content = null;
         if( $this->annoncesCheck->getAnnoncesTxt() != null )
         {
-            $content = '<h1>List of Posts</h1>  <ul>';
+            $content = '<h1>Liste des annonces</h1>  <ul>';
             foreach( $this->annoncesCheck->getAnnoncesTxt()as $post ) {
                 $content .= ' <li>';
-                $content .= '<a href="/annonces/index.php/post?id=' . $post['id'] . '">' . $post['title'] . '</a>';
+                $content .= '<span> '. $post['date'] .'</span>
+                            <a href="/annonces/index.php/post?id=' . $post['id'] . '">' . $post['title'] . '</a>';
                 $content .= ' </li>';
             }
             $content.= '</ul>';
