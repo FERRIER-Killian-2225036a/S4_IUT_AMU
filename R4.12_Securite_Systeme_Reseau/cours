@@ -1,0 +1,101 @@
+6 Fevrier 2024
+
+1 mois gratuit de Tryhackme
+
+RUMPS -> Talks 5 minutes sur hacking; pas d'enregistrement; border line légalité; par binôme expliqué exploit ou trouvé sur le web; montrer exo tryhackme
+
+Règle fonda : 
+Article 323-1 : 100000€ amende, 3 ans prison min
+CTF, pentest sous mandat : Pwn2One vois récompense précisement, Trouve une faille sans entreprise : BugBounty
+
+Domaine qui recherche
+
+White hat: hacker étique, encadré et pour le bien de tout le monde
+Black hat: échant, renvend failles
+Que de l'attaque
+
+10 ans -> man in the middle
+CryptoLock
+
+Blue:
+SOC -> Salle de crise 
+Threat intell -> analyse des menaces
+Forensic -> enquête
+Incidence response -> réponse a un attaque
+Malware analysis
+
+Red:
+Pentesting -> lockPicking (crochetage de serrure baie serveurs)
+Reverse engineering -> Verification de fiabilité des logiciels : trouver des patchs -> regarder ce qu'il fait 
+
+Métiers :
+RSSI ou analyse en sécu -> défini politique de sécu dans entreprise 62,5K
+Ingé sécu info 55k
+Réponse à incident CSIRT 65k
+exepert investigation (forensic) 75k
+Analyste en malware 45k
+Pentester 45k
+
+
+ANSSI:
+20 - 30 ans : 2 menaces -> terroriste, cyber
+Obligation de conformité a la defense pour les OIV(opérateurs d'importance vitale)
+
+Event de Pwn2One
+SynAktiv -> hack imprimentes
+
+Mitre Att&ck:
+Etape d'attaque:
+Pre attack : Recongnition -> Weaponize
+Attack : Deliver -> Exploit -> Control(persistance de l'attaque) -> Execute -> Maintain   
+
+SIEM -> endroit d'ou gérer tous les éléments :
+Collecter les données : Terminaux NPoint (OS), FireWall, Sondes d'analyse paquets par paquets 
+Agréger les sources
+Règles de detections
+Investiguer les alertes : Mettre un niveau de sévérité sur les alertes; repérer les paternes d'attaques
+Splunk pour traitement de logs (payant)
+ELK = elastic search (gratuit)
+
+
+Analyse de risques:
+Pyramide management du risque numérique (ANSSI IBIOS RM)
+définir une échelle de gravité
+1 - cadrage et SOC
+2 - qui va attaquer (motivation, ressources, activité)
+3 - qu'est-ce qui pourrait se passer
+4 - sénario opérationnel
+5 - analyse de risque + traitement | Rida = plan d'action
+
+Source de risque / objectifs visés SR/OV
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
