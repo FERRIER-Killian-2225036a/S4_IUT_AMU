@@ -1,0 +1,178 @@
+Conférence 1:
+Vuln windows sur Common Log File System pour privilages escalation
+Microsoft patch 32 failles 
+
+Fervrier 2022 Nokoyama exploite la faille
+Score de 7.8/10
+
+
+Conférence 2:
+Manon Dubien V.P CEFCYS
+asso CEFCYS inclusion des femmes dans la cyber, apolitique, non lucratif
+membre du campus cyber
+action de terrain
+4 missions:
+	- sensibiliser
+	- promouvoir
+	- accompagner
+	- eclairer
++ formation pour adhérants
+
+
+Conférance 3:
+attaque SPA contre le pivot de Gauss
+attaque physique => regarde émanation onde ou temps d'execution
+Exemple ROLLO:
+	Code correcteur erreur en métrique rang
+	
+
+Conférence 4:
+david kerr-munslow
+elements sécurisés : haute résistance aux attaques, certifié (Common criteria, EMVCo, FIPS 140.3), application (carte sim, caméra de surveillance)
+Avantage: plus petit, consome moins, flexible, très sécurisé, coûts moindre, mis a jour
+déjà implémenté
+encourager la sécurité: European Cyber Resilience Act, norme NIST, etc
+Legislation oblige sécu
+connection au système depuis le phare de voiture
+
+
+Conférance 5:
+Sujet reglementation objet connecter dans l'UE
+SESIP3 => niveau de robustesse et sécurité certifié en labo
+IoT beaucoup de standards
+standard, regulation, labels
+RED (radio equipment directive) reglementation mis en place 2025
+	- doit être vendu sans vuln connu
+	- avoir un meca de maj
+CRA (cyber resilience act) sur tout appareil donc sous-composants /!\ en application en 2027 /!\
+mais auto éval car complexe attendre
+se sont les entreprises qui doivent se mettre en conformité
+Objet doit pas mettre en danger le réseau, proteger les données de l'utilisateur
+Exception ex: medical et motoriser
+
+
+Conférence 6:
+Antoine Fournier, CEO Cyla
+Cyberscore -> gov = strat souv num = données sensibles pas externalisées
+La plus part de l'arrété = RGPD
+necessite 15M visite par mois
+Ne change rien
+droit dure = droit
+droit mou = règle pro auquels on choisi d'adhérer (norme iso)
+difficile anticipé la fraude
+Le monde va vite donc faut suivre
+Comment eval qualité forma/sensi ? 
+	- Score CVSS ??? Vuln donc non
+	- KPI critère prédef. Gouverner par les nombres ??? KPI bon mais exemple usine éffondrer car trop de machine 
+	Peut être auditeur et formateur pcq pas fonctionnaire
+IA dans sens/form dans la cyber ?
+	
+
+Conférence 7:
+Ingénieurie sociale
+Tech de manipulation utiliser pour avoir données sensibles/plans/programme info => sensible ou secret
+utilise psycho social -> rapport au monde et a nous même
+Se base sur les émotions
+Collaborateur ne son pas formé a ca 
+Va utilisé la crédulité des gens (péjoratif et part de l'interieur de nous alors que c'est de la manipulation qui peut atteindre tout le monde)
+Ces techniques viennent ciblé la plus grande faille, l'humain -> sous urgence et sous stresse ou peut divulger
+Proc systémique de ciblage = investigateur fait parti d'un réseau structuré et hierarchisé qui partent souvent d'un état
+Réseaux criminel sont utiliser par les autres pays pour qu'il ne soit pas impliqué
+travail d'enquête très pousser pour savoir quel méthodes mettre en place pour atteindre la cible
+Chiffre : 
+	ANSSI -> ransongiciels 52% PME TPE | 10% entreprise strat
+Se sentir coupable dans le contexte professionnel
+Pas de crédulité pcq c'est millimitré et bien fait
+Des fois même pas au courant (logiciels espion) 
+	-> d'ou l'intéret de la sensi
+C'est souvent des gouvernents ou autre 
+Autant de possibilité d'action que d'être humains
+Garder en tête que ca existe pour faire attention
+N'ai pas que sur l'informatique, approche physique pour recolte info
+De plus en plus sensibilisé mais reste encore du travail
+Risque = divulguer partenaire, secret pro, destabilisation, cybermenaces => infos sensibles
+Technique attaque point, attaque les utilisateurs pour entrer sur un stie
+talonage, physique grâce a de la confiance
+Pas très visible mais peut faire bcp de dégâts
+Procéder par entonoir:
+	1 - Quelle/Pourquoi cette cible, organiser l'attaque
+	utiliser psyco conitive et sociale
+	2 - faire un portrait robot, recherche infos, se tenir au courant des infos qui sortent sur la cible
+	chaque recherche va en donner une autre, effet boule de neige
+	arriver a du contenu privé et perso
+	possible partenaria avec différents acteur (exemple pays ou états)
+	3 - analyse puis mise en place d'hypothèses d'attaques
+	4 - conception 
+	5 - action
+necessite info globale sur la cybersec
+couple info/ingé sociale = binome puissant
+connaissance langue, pays -> plus value
+important de faire des simulations techniques
+Alerter gendarme/police si on est atteint
+Seule urgence est l'urgence vitale
+Voir panorama cybersec
+
+
+Conférence 8:
+Cybersec et comm de crise
+Pourquoi ? Actualité, piratages de partout
+Pb c'est faire de la comm pcq on se dit que le vole de nos données n'est pas grave
+Impact sur les actions de thales après cyberattaque
+Cyberrésiliant = on va se faire attaquer mais on sait comment gérer (plan continuité ou reprise d'activité)
++ important, préservé réputation donc comm pour pas perdre des client, donner le doute
+définir le rôle de chaque pour être éfficace 
+préparation en amont (simulation) 
+prévoir un site de backup ou un canal de discution
+création boite a outil de gestion de crise
+mettre en place un cellule de crise rapidement
+Rassurer rapidement le publics
+adapté le message pour chaque cible
+en fonction de l'évolution on s'adapte
+cohérence et coordination de la comm
+recommandation:
+	- être transparent
+	- cohérent
+	- pas se contredire
+	- pas de ton anxiogène
+	- respecter les faits, ne pas mentir
+	- éviter <<pas de commentaires>>
+Ne pas se précipiter
+Pas designer de coupable
+judiciarisation, limiter sa comm pour respecter le secret de l'instruction
+Après attaque, si pas savoir la gravité, changer mdp
+Danger de vole: usurpation d'id
+A voir ISO 27001 22301, AFNOR SPEC 2208
+La clé c'est l'anticipation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

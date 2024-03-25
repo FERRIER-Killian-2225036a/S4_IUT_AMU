@@ -1,0 +1,260 @@
+Conférence 1:
+Presentation pentest globale
+Tout ce qu'il faut savoir sur la cyber sur le site du NIST
+Croissances des attaques:
+	géopo, numérisation de la soc, IA, société externalise, location de service pour attaque (rasomware)
+	investissement insuffisant
+Solution:
+	essayer de s'attaquer elle mm = test d'intrusion
+pentest:
+	autoriser attaque non malvéillante sur tous les terminaux
+	but trouver failles exploitable
+	hacker le fait sans autorisation et pour des raisons différentes
+existance bug bounty
+Quand: 
+	changement majeur dans l'environnement info
+	régulièrement (tous les 12 mois PCI DSS) 
+	pour se conformer aux standards
+Qui : interne/externe
+Avoir des compétences techno et prend 6 - 7 ans
+Certif: 
+	Entrep: PASSI(ANSSI), CREST
+	PT: OSCP, CEH, CompTIA Pentest+
+Modèle sécu:
+	CIA Triade: Confid, intégr, avail
+	DAD Triade: Disclosure, Alteration, destruction = objectif hacker (antithèse CIA)
+Différentes approches:
+	Black box: pas d'info
+	White box: connait tout l'env
+	Grey box: entre les deux (qu'@ IP)
+Teams:
+	Red team: attaque
+	Blue team: deffense
+	Purple team: coordonnées red et blue
+	Autres: managment, development, !legal!
+Standards/Méthodo:
+	MITRE: info sur menaces cyber, CVE
+	OWASP: appli web => donne outils, TOP 10 chaque années publi menaces importante
+	NIST
+	PTES: pentest standards
+Phases:
+	Planif + délimitation champ d'appli: objectif, contrat, team, méthodes, ROE = Rules of engagement, prix
+	Reconnaissance: analyse vuln, collecte de données
+	Attaque + exploit
+	Rapport + comm des resutl (se fait régulièrement)
+Importance Pré-engagement
+   Contrat:
+	SLA(service level agreement)
+	SOW(Statement of work)
+	MSA(master service agreement)
+	NDA(non disclosure agreement)
+   Clause non-responsabilité
+	attention y'a un risque
+	se fait sur le sys de signa
+Collecte info (info gathering):
+	passive: OSINT(robo.txt, censys, theharvester), pas de connection direct a la cible
+	active: utilise les outils, scanner, nmap
+		Crawling: explorer le site
+		Scrap: extraction données du crawling
+		Outils: wget, msfcrawler, black widow, w3af, BurpSuite spider
+		sniffer paquets: wireshark, TCPDump
+		crafting: sonder les ensembles de règles des pare-feu hping3
+		detecter les defense: load balancer, web app firewall WAF
+		changer @ MAC régulièrement
+Recherche vuln:
+	Pas mis a jour
+	root privileges
+	config par defaut
+	perm par def
+	80% vuln humaine
+   outils:
+	Nikto, OWASP ZAP: open source web app
+	Nessus: search vuln
+	SQLMap
+	BurpSuite
+	OpenVAS: alt free Nessus
+	scout suite: audit pour cloud
+   app web:
+	static app secu testing (SAST): analyse code pour vuln
+	dynamic app secu testing (DAST): analyse app qui tourne
+CVSS = score des vuln (0-4, 4-7, 7-10, 10 crit)
+attaque & exploit:
+	quelle vuln exploiter:
+		voir le scope pour pas le depasser
+		exploit-db, rapid7, nvd.nist.gov
+	exploiter:
+		connexion
+		persistance
+		reconnaissance
+		recuillir données
+		prendre mesure pour dissimuler
+		nettoyer
+Rapport + comm result:
+	a qui ? definit dans NDA
+		primary contact: resp coord journ et gestion test
+		tech contact: fournir support tech
+		emergency contact
+	triggers:
+		critical findings: signé contact adhoc
+		stage completion: compte rendu fin de chaques étapes
+		indicators of prior compromise (IOC): la boite est/a été attaqué
+findings:
+	shared local admin cred: mdp diff par machine
+	weak passwd complexity
+	plain text passwd
+	no multifactor authentication: surtout dans cloud mettre en place le MFA(multi factor auth)
+	sql injection: sanitize user input, parameterize queries
+	unnecessary open services: Ipsec pour chiffré comm
+	sys hardening = rendre sys plus fort
+controles op communs:
+	Job rotation: plusieurs personnes bosse sur une mm tache pour éviter les fraudes
+	Time-of-day restrictions: restrictions horaires
+	Mandatory vacations: vérif vacances
+	User training: sensi des employés
+redac rapport:
+	titre, tables des matières
+	Executive summary: pour cadre et sup qui contient toutes les info inmportante
+	Scope details
+	Méthodo
+	findings and remediation: avec impacte sur le buisness
+	conclusion
+	appendix: toutes choses pas misent dans le rapport qui sont plus technique
+post-engagement cleanup: nettoyage des shells, des backdors, installtion d'outils
+
+
+Conférence 2:
+ClamAV CVE-2023-20032
+antivirus = première ligne de defense utilisé naivement et croire qu'ils font tout 
+ClamAV = antivirus sys unix (serveurs mails)
+	 codé en C
+envoie partition HFS+ dans GPT et ClamAV plante
+9.8 CVSS
+atteint tous les produit CISCO qui emporte CLAMAV v1
+GPT(GUID Partition Table)
+HFS+(hierarchical file systeme)
+
+
+Conférence 3:
+Courbe elliptiques et zk-SNARK
+
+
+Conférence 4:
+Cyberium = expert seg des réseau = protéger réseaux sensible
+libérer les entrep de cyber isolationnisme 
+segementation: protection "nord-sud" externe
+micro-seg: interne
+Faire de la defense proactive
+Modèle physique plus sur mais plus de pb opérationnel
+Ou virtuel
+pas de déplacement lattéral
+mise en conformité
+Les firewall ne suffisent pas tjr (vuln complexe de faire les maj)
+3 solution:
+	1 airgap: transport clé USB disque etc
+	2 firewall: bien config ?
+	3 True data diodes: mettre equip physique avec lumière qui empèche le retour arrière. Que certain usage (One way)
+utilisé dans industrie (4.0 exploiter leurs données)
+	     Gouv & defense
+	     cloud privé -> backup sécu, mettre les données dans un Bastion
+NIS2 -> unités importantes/essentielles
+Obligation par l'ANSSI dans quelques mois
+Pas négliger + pas réinventer la roue
+Reconnaissance certificat:
+	CC.EAL 7+
+	ANSSI
+OT -> IT
+réseau safty -> OT
+
+
+Conférence 5:
+Cyber dans un navire de guerre
+Naval group = vehicule de tout type marin
+navire cyber by design
+Vecteur attaque & menace:
+	bcp de comm entre batiments car porte-avion jamais seul
+	bcp de phase d'entretient
+prise de controle -> ami devient ennemi
+conception production et maintenance mais pas opération
+attention chaine d'approvisionnement
+menace d'un navire:
+	altération senseurs
+	sature réseau, plus de comm
+	situation tactique, detection force en face
+réponse:
+	CyMS = vérif sécu des navires, collection de log, vérification des logiciels embarqué
+	présentation a l'équipage (accompagnement de la reponse a incident) pcq pas de reponse a incidence dans le navire
+	moyen de demande un support sur terre
+	donnée état + capacité navire
+CERT -> threat intell
+partenaria thales, etc
+non signant = trouver dans le commerce pas vérif reverse ing pour vérif
+risque = proba evenement redouter se produit + son impact
+définition des classes cyber = niveau de secu par élément mais élement disjoint
+intégrer secu tout le long de la création et mise en place logiciel
+
+
+Conférence 6:
+Cabinet Louis Reynaud
+audit biometri
+test secu sur identification exemple connexion poste
+biometrie vulnérable par déf = peut attquer a tout niveau du système de reconnaissance
+attaque injection:
+	capteur tel et tout le reste du travail sur le cloud
+	usurpation d'id, fraude a l'id
+
+
+Conférence 7:
+SPAC 2020 sécu physique
+Syndicat pro
+info, form, acomp, repr, normalisation, certif
+SSCP entre reader carte et controller it
+attatque hybride: utilisation physique pour entrer IT
+80% accès clonable
+intrusion physique, tout IT compromis
+NIS2(netw and info syst sec)
+|_> sécu physique et cyber
+Europe va vers la standardisation
+OSDP standard américain mais respecte pas les normes européennes crypto
+
+
+Conférence 8:
+cabinet d'audit et conseil PASSI
+inspection générale sécurité
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
