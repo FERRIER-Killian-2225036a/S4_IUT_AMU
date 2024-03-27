@@ -116,3 +116,139 @@ IV - SI et organisation du travail
 				- 24/24 FAQ
 			d - m-commerce
 				regrp ensemble appli commerciales liés aux terminaux mobiles et transac commerciales effectué le + souvent en situation de mobilité
+
+Un progiciel = logiciel clé en main paramétrable rep besoin standardisé dans domaine. Progiciel result dev éditeur ou commu. PGI (progi gestion int) = produit logi param
+contruit autour bdd unique qui couvre la maj des besoins en traitement info des diff serv d'une orga grace ensenble modules compatibles.
+intégration = 1 mm donnée saisit 1x fois => suppr redondances garenti unicité données et maj. chaque acteur proc n'a accès données le concernant
+A - avantages d'un PGI
+	- conservation données
+	- facilité pour échanger avec partenaires
+Tous act op quoti avec lang des méthodes + outils commun 
+contrib start entrep glob
+perm collecter, stock, diffuser, traiter
+2 - rigid PGI
+	- surv accru des sal par tech 
+	- perte maitrise info pour les sal
+	- la transparence + tracabilité perm ident de resp, control auto, comp en continue des perf et des couts
+	- impact orga: collab doivent etre prepa accept les boulv => necessite forma
+	- standardisation proc trav 
+	- long couteux 
+a - de dispo de taille + puissance financ suffisante pour engag projet info honéreux
+risque de perte de savoir faire 
+necessite maintenance 
+conclusion: outil gestion plein essort. perm orga benef integr informationnel, uniform support info et proc assoc act informatisées. orga doit pas impact intra+intern. PGI 
+orient satisf client 
+mise en place PGI:
+	- ident proc visés
+	- install param PGI
+		- proc intégr tel quel PGI
+		- dev spec peuvent etre necessaires
+	- forma user
+
+
+Exo:
+SAGE:
+	module: 
+		- Comptabilité
+		- Gestion commerciale 
+		- Ressources humaines et paie 
+		- Gestion de la relation client (CRM) 
+		- Gestion de projet
+	cout:
+		- 18 -> 50 /mois HT
+	assistance:
+		- Support technique de Sage 
+		- Communauté en ligne 
+		- Documentation et guides d'utilisation
+		- Services de conseil et de formation
+ODOO:
+	module:
+		- Comptabilité
+		- Gestion des ventes
+		- Gestion des achats
+		- Gestion des stocks
+		- Ressources humaines
+		- Site web et e-commerce
+		- Fabrication
+		- Projets
+		- Point de vente
+		- Marketing
+		- CRM (Gestion de la relation client)
+		- Helpdesk
+		- Gestion des notes de frais
+		- Gestion des documents
+		- Gestion des contrats
+		- Gestion des événements
+		- Gestion des abonnements
+	cout: 0 -> 30 /user/mois
+	assistance:
+		- Support technique
+		- Documentation en ligne 
+		- Communauté 
+		- Services professionnels 
+CEGID:
+        module:
+		Gestion commerciale
+		Fiscalité
+		Gestion des immobilisations
+		Gestion de la paie
+		Gestion des stocks
+		Gestion des achats
+		Gestion des ventes
+		Gestion des projets
+		Gestion des notes de frais
+		Gestion de la relation client (CRM)
+		Gestion des fournisseurs
+		Gestion des contrats
+		Gestion des formations
+		Gestion des congés
+		Gestion de la production
+		Gestion des services
+		Gestion des commandes
+		Gestion des approvisionnements        	
+	cout: non renseigné
+        assistance:
+		- Support technique
+                - Documentation en ligne
+                - Communauté
+                - Services professionnels
+OPEN EBP:
+        module:
+		Comptabilité
+		Gestion commerciale
+		Gestion des achats
+		Gestion des stocks
+		Gestion des ressources humaines
+		Gestion de la paie
+		Facturation
+		Gestion des projets
+		Gestion des immobilisations
+		Gestion des notes de frais
+		Gestion des documents
+		Gestion des contacts
+		Gestion des fournisseurs
+		Gestion des clients
+		Gestion des ventes
+		Gestion des commandes
+		Gestion des inventaires
+		Gestion des tarifs
+		Gestion des documents commerciaux
+		Gestion des budgets
+		Gestion des frais généraux
+		Gestion des contrats
+		Gestion des interventions
+		Gestion des compétences
+		Gestion des formations
+		Gestion des congés
+		Gestion des absences
+		Gestion des recrutements
+		Gestion des évaluations
+		Gestion des tableaux de bord
+		Gestion des indicateurs de performance		
+        cout: 30 /user/mois
+        assistance:
+		Support technique par téléphone
+		Support par e-mail
+		Assistance en ligne
+		Services de formation
+		Services de mise en œuvre.
